@@ -1,5 +1,8 @@
 spring.main.sources: com.jpsmoura.camel.routes.Routes
 
+server.port: 8080
+restlet.server.port: 8081
+
 management.shell.auth.simple.user.name: user
 management.shell.auth.simple.user.password: password
 

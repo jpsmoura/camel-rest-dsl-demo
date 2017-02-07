@@ -2,15 +2,18 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.jpsmoura.camel</groupId>
-  <artifactId>camel-rest-dsl-example</artifactId>
+  <groupId>com.jpsmoura</groupId>
+  <artifactId>camel-rest-dsl</artifactId>
   <version>0.0.1</version>
   <name>Rest DSL Example</name>
   <description>A Camel Spring Boot Application that exposes a Rest Service. This service combines data from another two backend Rest Services using an Aggregation Strategy(JSON)</description>
   <properties>
     <camel.spring.boot-version>2.18.1</camel.spring.boot-version>
     <spring.boot-version>1.4.3.RELEASE</spring.boot-version>
+    <fabric8.mode>openshift</fabric8.mode>
+    <fabric8.generator.from>registry.access.redhat.com/jboss-fuse-6-tech-preview/fis-java-openshift</fabric8.generator.from>
   </properties>
+
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -30,16 +33,7 @@
     </dependencies>
   </dependencyManagement>
   <dependencies>
-    <dependency>
-      <groupId>javax.enterprise</groupId>
-      <artifactId>cdi-api</artifactId>
-      <version>1.2</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.camel</groupId>
-      <artifactId>camel-cdi</artifactId>
-    </dependency>
+
     <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-spring-boot-starter</artifactId>
@@ -89,15 +83,6 @@
 
   </dependencies>
   <build>
-    <resources>
-      <resource>
-        <filtering>true</filtering>
-        <directory>src/main/resources</directory>
-      </resource>
-    </resources>
-    <filters>
-      <filter>src/main/resources/application.yml</filter>
-    </filters>
     <plugins>
       <plugin>
         <groupId>org.springframework.boot</groupId>
@@ -119,19 +104,11 @@
           <execution>
             <goals>
               <goal>resource</goal>
+              <goal>helm</goal>
               <goal>build</goal>
             </goals>
           </execution>
         </executions>
-        <configuration>
-          <resources>
-            <labels>
-              <service>
-                <expose>true</expose>
-              </service>
-            </labels>
-          </resources>
-        </configuration>
       </plugin>
     </plugins>
   </build>
