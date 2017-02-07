@@ -13,9 +13,9 @@ This project is divided into three different branches. It aims to give an exampl
 
 # Run the Example
 
-`git clone https://github.com/jpsmoura/camel-rest-dsl-demo.git && cd camel-rest-dsl-demo`
+`git clone https://github.com/jpsmoura/camel-rest-dsl-demo.git`
 
 - Spring Boot standalone [link](https://github.com/jpsmoura/camel-rest-dsl-demo/blob/standalone/readme.md)
-- Spring Boot WAR running on a JEE Container (Websphere Liberty)[link](https://github.com/jpsmoura/camel-rest-dsl-demo/blob/war-websphere/readme.md)
+- Spring Boot WAR running on a JEE Container (Websphere Liberty) [link](https://github.com/jpsmoura/camel-rest-dsl-demo/blob/war-websphere/readme.md)
 - Spring Boot on Openshift [link](https://github.com/jpsmoura/camel-rest-dsl-demo/blob/openshift/readme.md)
 - Inception - Spring Boot WAR running on Websphere Liberty running on Openshift [link](https://github.com/jpsmoura/camel-rest-dsl-demo/blob/inception/readme.md)
