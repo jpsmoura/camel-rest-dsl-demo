@@ -5,9 +5,9 @@ import org.apache.camel.model.dataformat.JsonLibrary;
 import org.apache.camel.model.rest.RestBindingMode;
 import org.springframework.stereotype.Component;
 
-import com.jpsmoura.aggregators.MortageAggregator;
+import com.jpsmoura.aggregators.MortgageAggregator;
 import com.jpsmoura.datamodel.Applicant;
-import com.jpsmoura.datamodel.MortageApplication;
+import com.jpsmoura.datamodel.MortgageApplication;
 import com.jpsmoura.datamodel.Property;
 import com.jpsmoura.services.ApplicantsService;
 import com.jpsmoura.services.PropertiesService;
@@ -37,11 +37,11 @@ public class Routes extends RouteBuilder {
            .apiProperty("cors", "true");
 
          //Rest Services Definition
-          rest("/mortages/")
-                .get("/getMortageApplication")
+          rest("/mortgages/")
+                .get("/getMortgageApplication")
                 .produces("application/json")
-                .outType(MortageApplication.class)
-                .to("direct:getMortageApplication");
+                .outType(MortgageApplication.class)
+                .to("direct:getMortgageApplication");
 
           rest("/applicants/")
                 .get("/getApplicant")
@@ -62,19 +62,19 @@ public class Routes extends RouteBuilder {
            .bean(PropertiesService.class, "getProperty");
 
 
-        from("direct:getMortageApplication")
+        from("direct:getMortgageApplication")
 
-          .multicast(new MortageAggregator())
-          //Get a populated MortageApplication Example (Inline or Bean)
-          .bean(MortageApplication.class,"getMortageApplicationSample")
+          .multicast(new MortgageAggregator())
+          //Get a populated mortgageApplication Example (Inline or Bean)
+          .bean(MortgageApplication.class,"getMortgageApplicationSample")
           /*.process(new Processor() {
           	public void process(Exchange exchange) throws Exception {
-          		MortageApplication mortage = new MortageApplication();
-          		mortage.setApr(8.00);
-          		mortage.setAmortization(30);
-          		mortage.setDownPayment(4000);
-          		mortage.setMortgageAmount(40000);
-  				exchange.getIn().setBody(mortage);
+          		mortgageApplication mortgage = new mortgageApplication();
+          		mortgage.setApr(8.00);
+          		mortgage.setAmortization(30);
+          		mortgage.setDownPayment(4000);
+          		mortgage.setMortgageAmount(40000);
+  				exchange.getIn().setBody(mortgage);
   			 }
   			})*/
           .parallelProcessing()
