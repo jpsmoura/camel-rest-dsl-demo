@@ -1,13 +1,6 @@
-# Rest DSL Example
-
-A Camel Spring Boot Application that exposes three Rest endpoints. The mortgage application service combines data from another two backend Rest Services using an Aggregation Strategy.
-
-<img src="https://raw.githubusercontent.com/jpsmoura/camel-rest-dsl-demo/master/images/servicesDiagram.png" width="600" height="300">
-
 # Run the Example
 
-`git clone https://github.com/jpsmoura/camel-rest-dsl-demo.git && cd camel-rest-dsl-demo`
-
+Switch Branch `git checkout -b standalone`
 `mvn spring-boot:run`
 
 # Endpoints
