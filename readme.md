@@ -1,6 +1,11 @@
 # Run the Example
 
-Switch Branch `git checkout -b standalone`
+Switch Branch
+
+`git checkout -b standalone`
+
+Run the Spring Boot App
+
 `mvn spring-boot:run`
 
 # Endpoints
