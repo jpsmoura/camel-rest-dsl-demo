@@ -1,6 +1,3 @@
-# Rest DSL Example
-A Camel Spring Boot Application that exposes a Rest Service. This service combines data from another two backend Rest Services using an Aggregation Strategy (JSON)
-
 # Versions Used
 
 | Technology                                                | Version       |
@@ -18,7 +15,7 @@ A Camel Spring Boot Application that exposes a Rest Service. This service combin
 2. Enter your Credentials to register the box
 3. Login using the CLI `oc login 10.1.2.2:8443` `u:admin p:admin`
 4. Create a new project `oc new-project demo`
-5. Clone and switch to this branch `git clone -b openshift https://github.com/jpsmoura/camel-rest-dsl-demo.git && cd camel-rest-dsl-demo`
+5. Switch to this branch `git checkout openshift`
 6. Build and Deploy onto Openshift. `mvn clean fabric8:deploy`
    * Base Image [link](https://access.redhat.com/containers/#/repo/583fdc1f9c624c7ea34eb945)-> registry.access.redhat.com/jboss-fuse-6-tech-preview/fis-java-openshift
    * Deployed using Fabric8 Maven Plugin [link](https://maven.fabric8.io/)
