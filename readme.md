@@ -5,8 +5,7 @@ A Camel Spring Boot Application that exposes a Rest Service. This service combin
 
 | Technology                                                | Version       |
 | :--- | :--- |
-| JVM                                                       | 1.8.0_77      |
-| Apaache Maven                                             | 3.3.9         |
+| Apache Maven                                              | 3.3.9         |
 | Spring Boot                                               | 1.4.3.RELEASE |
 | Apache Camel                                              | 2.18.1        |
 | Fabric8 Maven Plugin Camel                                | 3.2.15        |
