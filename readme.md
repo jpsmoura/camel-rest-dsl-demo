@@ -28,6 +28,10 @@
 - [http://spring-boot-demo.rhel-cdk.10.1.2.2.xip.io/properties/getProperty](http://spring-boot-demo.rhel-cdk.10.1.2.2.xip.io/properties/getProperty)
 - [http://spring-boot-demo.rhel-cdk.10.1.2.2.xip.io/mortgages/getMortgageApplication](http://spring-boot-demo.rhel-cdk.10.1.2.2.xip.io/mortgages/getMortgageApplication)
 
+## Swagger Documentation
+
+- [http://spring-boot-demo.rhel-cdk.10.1.2.2.xip.io/services/api-doc](http://spring-boot-demo.rhel-cdk.10.1.2.2.xip.io/services/api-doc)
+
 ## Tomcat - All the Spring Boot Endpoints e.g.
 
 - [http://spring-boot-demo.rhel-cdk.10.1.2.2.xip.io/health](http://spring-boot-demo.rhel-cdk.10.1.2.2.xip.io/health)
