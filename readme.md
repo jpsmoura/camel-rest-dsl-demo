@@ -40,5 +40,4 @@
 - [http://spring-boot-demo.rhel-cdk.10.1.2.2.xip.io/trace](http://spring-boot-demo.rhel-cdk.10.1.2.2.xip.io/trace)
 - ...
 
-
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/d692a929abe54da8ae6f)
