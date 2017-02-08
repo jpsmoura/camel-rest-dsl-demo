@@ -1,5 +1,6 @@
 package com.jpsmoura.camel.routes;
 
+import org.apache.camel.Exchange;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.model.dataformat.JsonLibrary;
 import org.apache.camel.model.rest.RestBindingMode;
@@ -14,19 +15,20 @@ import com.jpsmoura.services.PropertiesService;
 
 @Component
 public class Routes extends RouteBuilder {
-	
+
     @Override
     public void configure() {
-    	 //Rest DSL Configuration 
+    	 //Rest DSL Configuration
          restConfiguration()
-         .component("restlet")
+         .component("servlet")
          .bindingMode(RestBindingMode.json)
          .dataFormatProperty("prettyPrint", "true")
-         .contextPath("/").port(8081)
+         .contextPath("/")
+         //.port(8081)
          .apiContextPath("/api-doc")
-           .apiProperty("api.title", "User API").apiProperty("api.version", "1.2.3")
+           .apiProperty("api.title", "Services API").apiProperty("api.version", "0.0.1")
            .apiProperty("cors", "true");
-         
+
         //Rest Services Definition
         rest("/mortgages/")
                 .get("/getMortgageApplication")
@@ -39,27 +41,27 @@ public class Routes extends RouteBuilder {
                 .produces("application/json")
                 .outType(Applicant.class)
                 .to("direct:getApplicant");
-        
+
         rest("/properties/")
 		        .get("/getProperty")
 		        .produces("application/json")
 		        .outType(Property.class)
 		        .to("direct:getProperty");
-        
-        from("direct:getApplicant")    
+
+        from("direct:getApplicant")
          .bean(ApplicantsService.class, "getApplicant");
-        
-        from("direct:getProperty")    
+
+        from("direct:getProperty")
         .bean(PropertiesService.class, "getProperty");
 
-        
+
         from("direct:getMortgageApplication")
-        
+
           .multicast(new MortgageAggregator())
           //Get a populated MortgageApplication Example (Inline or Bean)
           .bean(MortgageApplication.class,"getMortgageApplicationSample")
-          /*.process(new Processor() { 
-          	public void process(Exchange exchange) throws Exception {	
+          /*.process(new Processor() {
+          	public void process(Exchange exchange) throws Exception {
           		MortgageApplication mortgage = new MortgageApplication();
           		mortgage.setApr(8.00);
           		mortgage.setAmortization(30);
@@ -71,18 +73,20 @@ public class Routes extends RouteBuilder {
           .parallelProcessing()
           .to("direct:callPropertyService", "direct:callApplicantService")
           .end();
-       
 
-        from("direct:callPropertyService")     
+
+        from("direct:callPropertyService")
          .removeHeaders("CamelHttp*")
-         .enrich("http://localhost:8081/properties/getProperty") 
+		     .setHeader(Exchange.HTTP_METHOD,simple("GET"))
+         .enrich("http://localhost:8080/services/properties/getProperty")
          .unmarshal().json(JsonLibrary.Jackson, Property.class);
-        
-        
+
+
         from("direct:callApplicantService")
          .removeHeaders("CamelHttp*")
-         .enrich("http://localhost:8081/applicants/getApplicant") 
+		     .setHeader(Exchange.HTTP_METHOD,simple("GET"))
+         .enrich("http://localhost:8080/services/applicants/getApplicant")
          .unmarshal().json(JsonLibrary.Jackson, Applicant.class);
-        
+
     }
 }
