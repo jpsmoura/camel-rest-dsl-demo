@@ -1,7 +1,7 @@
 spring.main.sources: com.jpsmoura.camel.routes.Routes
 
 server.port: 8080
-restlet.server.port: 8081
+services.endpoint: http://restlet-route-demo.rhel-cdk.10.1.2.2.xip.io/services
 
 management.shell.auth.simple.user.name: user
 management.shell.auth.simple.user.password: password

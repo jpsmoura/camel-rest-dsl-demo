@@ -1,5 +1,6 @@
 package com.jpsmoura.camel.routes;
 
+import org.apache.camel.Exchange;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.model.dataformat.JsonLibrary;
 import org.apache.camel.model.rest.RestBindingMode;
@@ -16,19 +17,15 @@ import org.apache.camel.PropertyInject;
 @Component
 public class Routes extends RouteBuilder {
 
-    @PropertyInject("{{restlet.server.port}}")
-    private String restlet_port;
-
     @Override
     public void configure() {
 
     	 //Rest DSL Configuration
          restConfiguration()
-         .component("restlet")
+         .component("servlet")
          .bindingMode(RestBindingMode.json)
          .dataFormatProperty("prettyPrint", "true")
          .contextPath("/")
-		     .port(Integer.parseInt(restlet_port))
 
 		  //Swagger Support
          .apiContextPath("/api-doc")
@@ -84,13 +81,15 @@ public class Routes extends RouteBuilder {
 
         from("direct:callPropertyService")
          .removeHeaders("CamelHttp*")
-         .enrich("http://localhost:"+restlet_port+"/properties/getProperty")
+         .setHeader(Exchange.HTTP_METHOD,simple("GET"))
+         .enrich("{{services.endpoint}}/properties/getProperty")
          .unmarshal().json(JsonLibrary.Jackson, Property.class);
 
 
         from("direct:callApplicantService")
          .removeHeaders("CamelHttp*")
-         .enrich("http://localhost:"+restlet_port+"/applicants/getApplicant")
+         .setHeader(Exchange.HTTP_METHOD,simple("GET"))
+         .enrich("{{services.endpoint}}/applicants/getApplicant")
          .unmarshal().json(JsonLibrary.Jackson, Applicant.class);
 
     }
