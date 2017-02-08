@@ -1,0 +1,10 @@
+spring.main.sources: com.jpsmoura.camel.routes.Routes
+services.endpoint: http://localhost/camel-rest-dsl-example-0.0.1/services
+
+management.shell.auth.simple.user.name: user
+management.shell.auth.simple.user.password: password
+
+camel:
+  springboot:
+    allow-use-original-message: false
+    shutdown-timeout: 15

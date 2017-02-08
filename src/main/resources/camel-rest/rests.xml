@@ -1,0 +1,7 @@
+<rests xmlns="http://camel.apache.org/schema/spring">
+   <rest>
+      <get uri="/xmlexample">
+         <to uri="direct:getApplicant"/>
+      </get>
+   </rest>
+ </rests>
