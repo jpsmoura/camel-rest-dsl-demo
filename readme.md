@@ -8,7 +8,7 @@ Switch to this branch
 
 `oc new-project inception`
 
-`oc new-app registry.access.redhat.com/jboss-fuse-6-tech-preview/fis-java-openshift~https://github.com/jpsmoura/camel-rest-dsl-demo.git#inception`
+`oc new-app https://github.com/jpsmoura/camel-rest-dsl-demo.git#inception`
 
 Create Route
 
