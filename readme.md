@@ -2,11 +2,10 @@
 
 Switch Branch
 
-`git checkout -b standalone`
+`git checkout standalone`
 
 Run the Spring Boot App
 
-`cd camel-rest-dsl-demo`
 `mvn spring-boot:run`
 
 # Endpoints
