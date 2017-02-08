@@ -5,7 +5,7 @@ It includes a Camel Spring Boot Application that exposes three Rest endpoints. T
 
 <img src="https://raw.githubusercontent.com/jpsmoura/camel-rest-dsl-demo/master/images/servicesDiagram.png" width="600" height="300">
 
-This project is divided into three different branches. It aims to give an example on how to deploy and run a Camel Spring Boot Application in different Containers:
+This project is divided into four git branches:
 
 - Spring Boot Standalone (Tomcat)
 - Spring Boot WAR running on a JEE Container (Websphere Liberty)
