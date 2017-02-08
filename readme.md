@@ -2,11 +2,17 @@
 
 Switch to this branch
 
- `git checkout war-websphere`
+`git checkout inception`
 
 `mvn clean package`
 
-`docker run -d -p 80:9080 -v $(pwd)/target/camel-rest-dsl-example-0.0.1.war:/config/dropins/camel-rest-dsl-example-0.0.1.war   websphere-liberty:webProfile7`
+`oc new-project inception`
+
+`oc new-app registry.access.redhat.com/jboss-fuse-6-tech-preview/fis-java-openshift~https://github.com/jpsmoura/camel-rest-dsl-demo.git#inception`
+
+Create Route
+
+`oc expose svc/`
 
 # Hit the endpoints
 
