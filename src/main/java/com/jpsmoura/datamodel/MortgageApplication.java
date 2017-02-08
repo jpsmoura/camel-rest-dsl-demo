@@ -2,7 +2,7 @@ package com.jpsmoura.datamodel;
 
 import org.apache.camel.Exchange;
 
-public class MortageApplication  implements java.io.Serializable {
+public class MortgageApplication  implements java.io.Serializable {
 
 static final long serialVersionUID = 1L;
     
@@ -15,10 +15,10 @@ static final long serialVersionUID = 1L;
     private Applicant applicant; 
     private Property property;
     
-    public MortageApplication() {
+    public MortgageApplication() {
     }
 
-    public MortageApplication(Applicant applicant, Property property, Integer downPayment, Integer amortization, Integer mortgageAmount, Double apr) {
+    public MortgageApplication(Applicant applicant, Property property, Integer downPayment, Integer amortization, Integer mortgageAmount, Double apr) {
         this.applicant = applicant;
         this.property = property;
         this.downPayment = downPayment;
@@ -80,13 +80,13 @@ static final long serialVersionUID = 1L;
         this.property = property;
     }
     
-    public void getMortageApplicationSample(Exchange exchange) {
-    	MortageApplication mortage = new MortageApplication();
-  		mortage.setApr(8.00);
-  		mortage.setAmortization(30);
-  		mortage.setDownPayment(4000);
-  		mortage.setMortgageAmount(40000);
-	    exchange.getIn().setBody(mortage);
+    public void getMortgageApplicationSample(Exchange exchange) {
+    	MortgageApplication mortgage = new MortgageApplication();
+  		mortgage.setApr(8.00);
+  		mortgage.setAmortization(30);
+  		mortgage.setDownPayment(4000);
+  		mortgage.setMortgageAmount(40000);
+	    exchange.getIn().setBody(mortgage);
     }
    
 

@@ -3,7 +3,7 @@ package com.jpsmoura.datamodel;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-@ApiModel(description = "Represents a Mortage Applicant")
+@ApiModel(description = "Represents a Mortgage Applicant")
 public class Applicant  implements java.io.Serializable {
 
 static final long serialVersionUID = 1L;
