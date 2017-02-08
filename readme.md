@@ -4,8 +4,6 @@ Switch to this branch
 
 `git checkout inception`
 
-`mvn clean package`
-
 `oc new-project inception`
 
 `oc new-app https://github.com/jpsmoura/camel-rest-dsl-demo.git#inception`
@@ -16,7 +14,7 @@ Create Route
 
 # Hit the endpoints
 
-## Restlet - Camel Rest DSL
+## Camel Rest DSL - camel-servlet
 
 - http://camel-rest-dsl-demo-inception.rhel-cdk.10.1.2.2.xip.io/camel-rest-dsl-example-0.0.1/services/applicants/getApplicant
 - http://camel-rest-dsl-demo-inception.rhel-cdk.10.1.2.2.xip.io/camel-rest-dsl-example-0.0.1/services/properties/getProperty
