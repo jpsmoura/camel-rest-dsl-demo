@@ -29,3 +29,7 @@ Run the Spring Boot App
 - ...
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/d9c404348d394ae78fcf)
+
+# Connecting to the Spring Boot Console
+
+`ssh -p 2000 user@localhost` `u:user p:password`
