@@ -24,8 +24,8 @@ Run the Spring Boot App
 
 - (http://localhost:8080/health)
 - [](http://localhost:8080/metrics)
-- http://localhost:8080/env
-- http://localhost:8080/trace
+- [http://localhost:8080/env]
+- [http://localhost:8080/trace](http://localhost:8080/trace)
 
 ...
 
