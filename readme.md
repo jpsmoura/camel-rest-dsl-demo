@@ -4,17 +4,13 @@ A Simple Docker Strategy is used here to build the image. For simplicity, the wa
 
 # Run the Example
 
-Switch to this branch
-
-`git checkout inception`
-
-`oc new-project inception`
-
-`oc new-app https://github.com/jpsmoura/camel-rest-dsl-demo.git#inception`
-
-Create Route
-
-`oc expose svc/camel-rest-dsl-demo`
+1. Start the CDK `vagrant up` [link](https://developers.redhat.com/products/cdk/overview/)
+2. Enter your Credentials to register the box
+3. Login using the CLI `oc login 10.1.2.2:8443` `u:admin p:admin`
+4. Create a new project `oc new-project inception`
+5. Switch to this branch `git checkout inception`
+6. Create the App in Openshift `oc new-app https://github.com/jpsmoura/camel-rest-dsl-demo.git#inception`
+7. Create Route `oc expose svc/camel-rest-dsl-demo`
 
 # Hit the endpoints
 
