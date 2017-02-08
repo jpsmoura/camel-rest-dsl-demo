@@ -22,10 +22,11 @@ Run the Spring Boot App
 
 ## Tomcat - All the Spring Boot Endpoints e.g.
 
-- http://localhost:8080/health
-- http://localhost:8080/metrics
+- (http://localhost:8080/health)
+- [](http://localhost:8080/metrics)
 - http://localhost:8080/env
 - http://localhost:8080/trace
+
 ...
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/d9c404348d394ae78fcf)
