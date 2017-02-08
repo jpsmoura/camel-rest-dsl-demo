@@ -1,3 +1,7 @@
+# Description
+
+A Simple Docker Strategy is used here to build the image. For simplicity, the war file is stored with the source code. Ideally, it should be pulled from an Artifact repository during the Docker build.
+
 # Run the Example
 
 Switch to this branch
