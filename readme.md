@@ -12,19 +12,19 @@ Switch to this branch
 
 Create Route
 
-`oc expose svc/`
+`oc expose svc/camel-rest-dsl-demo`
 
 # Hit the endpoints
 
 ## Restlet - Camel Rest DSL
 
-- http://localhost/camel-rest-dsl-example-0.0.1/services/applicants/getApplicant
-- http://localhost/camel-rest-dsl-example-0.0.1/services/properties/getProperty
-- http://localhost/camel-rest-dsl-example-0.0.1/services/mortgages/getMortgageApplication
+- http://camel-rest-dsl-demo-inception.rhel-cdk.10.1.2.2.xip.io/camel-rest-dsl-example-0.0.1/services/applicants/getApplicant
+- http://camel-rest-dsl-demo-inception.rhel-cdk.10.1.2.2.xip.io/camel-rest-dsl-example-0.0.1/services/properties/getProperty
+- http://camel-rest-dsl-demo-inception.rhel-cdk.10.1.2.2.xip.io/camel-rest-dsl-example-0.0.1/services/mortgages/getMortgageApplication
 
 ## Tomcat - All the Spring Boot Endpoints e.g.
 
-- http://localhost/camel-rest-dsl-example-0.0.1/health
-- http://localhost/camel-rest-dsl-example-0.0.1/metrics
+- http://camel-rest-dsl-demo-inception.rhel-cdk.10.1.2.2.xip.io/camel-rest-dsl-example-0.0.1/health
+- http://camel-rest-dsl-demo-inception.rhel-cdk.10.1.2.2.xip.io/camel-rest-dsl-example-0.0.1/metrics
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/9a66c0e16ae26b2402ab)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/2f9bf92f75a339c75fd4)
