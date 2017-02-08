@@ -6,7 +6,7 @@ A Camel Spring Boot Application that exposes three Rest endpoints. The mortgage 
 
 This project is divided into three different branches. It aims to give an example on how to deploy and run a Camel Spring Boot Application in different Containers:
 
-- Spring Boot standalone
+- Spring Boot Standalone
 - Spring Boot WAR running on a JEE Container (Websphere Liberty)
 - Spring Boot on Openshift
 - Inception - Spring Boot WAR running on Websphere Liberty running on Openshift
@@ -14,6 +14,9 @@ This project is divided into three different branches. It aims to give an exampl
 # Run the Example
 
 `git clone https://github.com/jpsmoura/camel-rest-dsl-demo.git`
+
+`cd camel-rest-dsl-demo`
+
 
 - Spring Boot standalone [link](https://github.com/jpsmoura/camel-rest-dsl-demo/blob/standalone/readme.md)
 - Spring Boot WAR running on a JEE Container (Websphere Liberty) [link](https://github.com/jpsmoura/camel-rest-dsl-demo/blob/war-websphere/readme.md)
