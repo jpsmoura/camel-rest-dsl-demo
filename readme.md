@@ -8,15 +8,15 @@ Switch to this branch
 
 `docker run -d -p 80:9080 -v $(pwd)/target/camel-rest-dsl-example-0.0.1.war:/config/dropins/camel-rest-dsl-example-0.0.1.war   websphere-liberty:webProfile7`
 
-# Hit the endpoints
+# Hit the endpoints(Websphere)
 
-## Restlet - Camel Rest DSL
+## Camel Rest DSL
 
 - http://localhost/camel-rest-dsl-example-0.0.1/services/applicants/getApplicant
 - http://localhost/camel-rest-dsl-example-0.0.1/services/properties/getProperty
 - http://localhost/camel-rest-dsl-example-0.0.1/services/mortgages/getMortgageApplication
 
-## Tomcat - All the Spring Boot Endpoints e.g.
+## All the Spring Boot Endpoints e.g.
 
 - http://localhost/camel-rest-dsl-example-0.0.1/health
 - http://localhost/camel-rest-dsl-example-0.0.1/metrics
