@@ -20,9 +20,9 @@
    * Base Image [link](https://access.redhat.com/containers/#/repo/583fdc1f9c624c7ea34eb945)-> registry.access.redhat.com/jboss-fuse-6-tech-preview/fis-java-openshift
    * Deployed using Fabric8 Maven Plugin [link](https://maven.fabric8.io/)
 
-# Hit the endpoints
+# Hit the endpoints(Tomcat Server)
 
-## Restlet - Camel Rest DSL
+## Camel Rest DSL
 
 - [http://spring-boot-demo.rhel-cdk.10.1.2.2.xip.io/applicants/getApplicant](http://spring-boot-demo.rhel-cdk.10.1.2.2.xip.io/applicants/getApplicant)
 - [http://spring-boot-demo.rhel-cdk.10.1.2.2.xip.io/properties/getProperty](http://spring-boot-demo.rhel-cdk.10.1.2.2.xip.io/properties/getProperty)
@@ -32,7 +32,7 @@
 
 - [http://spring-boot-demo.rhel-cdk.10.1.2.2.xip.io/services/api-doc](http://spring-boot-demo.rhel-cdk.10.1.2.2.xip.io/services/api-doc)
 
-## Tomcat - All the Spring Boot Endpoints e.g.
+## All the Spring Boot Endpoints e.g.
 
 - [http://spring-boot-demo.rhel-cdk.10.1.2.2.xip.io/health](http://spring-boot-demo.rhel-cdk.10.1.2.2.xip.io/health)
 - [http://spring-boot-demo.rhel-cdk.10.1.2.2.xip.io/metrics](http://spring-boot-demo.rhel-cdk.10.1.2.2.xip.io/metrics)
