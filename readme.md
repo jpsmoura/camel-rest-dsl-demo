@@ -5,9 +5,10 @@ It includes a Camel Spring Boot Application that exposes three Rest endpoints. T
 
 <img src="https://raw.githubusercontent.com/jpsmoura/camel-rest-dsl-demo/master/images/servicesDiagram.png" width="600" height="300">
 
-This project is divided into four git branches:
+This project is divided into five git branches:
 
 - Spring Boot Standalone (Tomcat)
+- Spring Boot Standalone (Undertow)
 - Spring Boot WAR running on a JEE Container (Websphere Liberty)
 - Spring Boot on Openshift (Tomcat)
 - Inception - Spring Boot WAR running on Websphere Liberty running on Openshift
