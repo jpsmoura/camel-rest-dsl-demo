@@ -12,7 +12,7 @@ A Simple Docker Strategy is used here to build the image. For simplicity, the wa
 6. Create the App in Openshift `oc new-app https://github.com/jpsmoura/camel-rest-dsl-demo.git#inception`
 7. Create Route `oc expose svc/camel-rest-dsl-demo`
 
-# Hit the endpoints
+# Hit the endpoints (Websphere Server)
 
 ## Camel Rest DSL - camel-servlet
 
@@ -20,7 +20,7 @@ A Simple Docker Strategy is used here to build the image. For simplicity, the wa
 - http://camel-rest-dsl-demo-inception.rhel-cdk.10.1.2.2.xip.io/camel-rest-dsl-example-0.0.1/services/properties/getProperty
 - http://camel-rest-dsl-demo-inception.rhel-cdk.10.1.2.2.xip.io/camel-rest-dsl-example-0.0.1/services/mortgages/getMortgageApplication
 
-## Tomcat - All the Spring Boot Endpoints e.g.
+## All the Spring Boot Endpoints e.g.
 
 - http://camel-rest-dsl-demo-inception.rhel-cdk.10.1.2.2.xip.io/camel-rest-dsl-example-0.0.1/health
 - http://camel-rest-dsl-demo-inception.rhel-cdk.10.1.2.2.xip.io/camel-rest-dsl-example-0.0.1/metrics
