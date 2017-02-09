@@ -8,9 +8,9 @@ Run the Spring Boot App
 
 `mvn spring-boot:run`
 
-# Hit the endpoints
+# Hit the endpoints(Tomcat Server)
 
-## Restlet - Camel Rest DSL
+## Camel Rest DSL
 
 - [http://localhost:8080/services/applicants/getApplicant](http://localhost:8080/services/applicants/getApplicant)
 - [http://localhost:8080//services/properties/getProperty](http://localhost:8080//services/properties/getProperty)
@@ -20,7 +20,7 @@ Run the Spring Boot App
 
 - [http://localhost:8080/services/api-doc](http://localhost:8080/services/api-doc)
 
-## Tomcat - All the Spring Boot Endpoints e.g.
+## All the Spring Boot Endpoints e.g.
 
 - [http://localhost:8080/health](http://localhost:8080/health)
 - [http://localhost:8080/metrics](http://localhost:8080/metrics)
